@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+/* main */
+.p-t{
+    padding-top: 40px;
+}
+
+.container .left-side{
+    position: relative;
+    background: rgb(0, 16, 41);
+    padding: 30px;
+}
+
+.profile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile .img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile h2{
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profile h2 span{
+    font-size: 0.8em;
+    font-weight: 200;
+}
+
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact ul{
+    position: relative;
+}
+
+.contact ul li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contact ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contact ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: aquamarine;
+}
+
+.education li{
+    margin-bottom: 20px;
+}
+
+.education h5{
+    color: aquamarine;
+    font-weight: 500;
+}
+
+.education h4{
+    color: #fff;
+    font-weight: 500;
+}
+
+.language ul{
+    position: relative;
+}
+
+.language ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.language ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+
+.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    display: block;
+    background: rgb(44, 44, 44);
+    margin-top: 5px;
+}
+
+.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: aquamarine;
+}
+
+.container .right-side{
+    position: relative;
+    background: rgb(255, 255, 255);
+    padding: 40px;
+}
+
+.about{
+    margin-bottom: 50px;
+}
+
+.about:nth-child{
+    margin-bottom: 0;
+}
+
+.title2{
+    color: rgb(44, 44, 44);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p{
+    color: #333;
+}
+
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skills .box h4{
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 500;
+}
+
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: rgb(44, 44, 44);
+}
+
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(26, 182, 182);
+}
+
+.organisasi ul{
+    margin-top: 30px;
+}
+
+.hobby ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.organisasi ul li, .hobby ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.organisasi ul li .bx, .hobby ul li .bx{
+    color: rgb(26, 182, 182);
+    font-size: 18px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.btn{
+    transform: translateY(100%);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0.5rem;
+    background: aquamarine;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: rgb(26, 182, 182);
+    color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+    .container{
+        margin: 0;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .hobby ul{
+        grid-template-columns: repeat(2,1fr); 
+    }
+}
+
+@media screen and (max-width: 600px){
+    .skills .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .skills .box h4{
+        margin-bottom: 5px;
+    }
+}
+
+@media print{
+    .container{
+        margin: 0;
+        width: 100%;
+        height: 1130px;
+    }
+
+    .about{
+        margin-bottom: 30px;
+    }
+
+    .skills .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .organisasi ul{
+        margin-top: 0;
+    }
+
+    .hobby ul{
+        grid-template-columns: repeat(2,1fr); 
+    }
+
+    .btn{
+        display: none;
+    }
+}
